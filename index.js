@@ -8,7 +8,7 @@ const tinylinkModel = require("./models/post");
 app.use(cors());
 app.use(express.json());
 mongoose
-  .connect(process.env.MONGO_URL)
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
 
