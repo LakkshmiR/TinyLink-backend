@@ -8,12 +8,10 @@ const tinylinkModel = require("./models/post");
 app.use(cors());
 app.use(express.json());
 mongoose
-  .connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("Mongodb Connected"))
+  .connect(process.env.MONGO_URL)
+  .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
+
 app.post("/add", async (req, res) => {
   const url = req.body.url;
   let code = req.body.customCode;
