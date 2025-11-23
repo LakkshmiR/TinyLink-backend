@@ -99,7 +99,7 @@ app.get("/get/:code", async (req, res) => {
     res.status(500).json({ message: "Server Error" });
   }
 });
-
-app.listen(3000, () => {
-  console.log("Server is Running");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
