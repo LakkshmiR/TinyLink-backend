@@ -5,7 +5,7 @@ const tinylinkSchema = new mongoose.Schema({
   clicks: { type: Number, default: 0 },
   lastClicked: {
     type: Date,
-    default: Date.now,
+    default: "-",
   },
 });
 const tinylinkModel = mongoose.model("urls", tinylinkSchema);

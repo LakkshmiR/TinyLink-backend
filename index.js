@@ -14,7 +14,9 @@ app.use(
 );
 app.use(express.json());
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(
+    "mongodb+srv://tinylink_user:tinylink123@tinylink-cluster.vnjhbye.mongodb.net/tinylinkdb?retryWrites=true&w=majority"
+  )
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
 
