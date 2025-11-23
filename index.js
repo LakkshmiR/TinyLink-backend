@@ -7,7 +7,7 @@ const app = express();
 const tinylinkModel = require("./models/post");
 app.use(
   cors({
-    origin: "https://tinylink-ochre.vercel.app/",
+    origin: "https://tinylink-ochre.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
